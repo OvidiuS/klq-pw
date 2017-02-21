@@ -24,13 +24,19 @@
 
 			<!-- NAVIGATION START -->
 <?php $topMenuPages = $pages->get(1015)->top_menu_pages;?>
-			<ul class="topMenu">
+			<ul class="topMenu clearfix">
 
-				<li id="retreats" ><a href="<?= $pages->get('/')->url ?>"><span>Kulaqua <br> Retreat Centers</span></a>
+				<li id="retreats" class="submenuParent" >
+					<a href="<?= $pages->get('/')->url ?>"><span>Kulaqua <br> Retreat Centers</span></a>
+					<ul class="topSubmenu">
+						<li><a href="http://www.kulaqua.com/ " target="blank">Retreat &amp; Conference Center</a></li>
+						<li><a href="<?= $pages->get('1013')->url ?>">Stillwater Lodge</a></li>
+						<li><a href="<?= $pages->get('1095')->url ?>">River Ranch</a></li>
+						<li><a href="<?= $pages->get('1014')->url ?>">Pine Lake Retreat</a></li>
+					</ul>
 				</li>
 				<li id="camp"><a href="<?= $pages->get('1011')->url ?>"><span>Kulaqua’s <br> Summer Camp</span></a></li>
 				<li id="donate"><a href="<?= $pages->get('1031')->url ?>"><span>Make a <br> Donation</span></a></li>
-
 			</ul>
 			<!-- /.topMenu -->
 			<div class="headerInfo">

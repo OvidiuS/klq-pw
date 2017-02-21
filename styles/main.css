@@ -24,7 +24,11 @@ html, body {
 	padding:0;
 	background-color: #322D32;
 }
-
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
 .clear{
 	clear:both;
 	line-height: 1px;
@@ -106,9 +110,10 @@ h1, h2, h3, h4 {
 	margin: 0;
 }
 .topMenu {
-	overflow: hidden;
 	margin-left: 275px;
 	padding: 10px 0 0 0;
+  position: relative;
+  z-index: 999;
 }
 .topMenu li {
   display: inline-block;
@@ -138,9 +143,13 @@ h1, h2, h3, h4 {
 	border-color: #F4896D;
 	font-size: 18px;
 }
-.topMenu>li:hover {
-  -webkit-filter: saturate(3);
-    filter: saturate(3);
+.topMenu>li:hover,.topMenu>li:hover>ul>li:hover {
+  -webkit-filter: saturate(300%);
+    filter: saturate(300%);
+}
+.topMenu>li:hover>ul {
+  -webkit-filter: saturate(33%);
+    filter: saturate(33%);
 }
 .topMenu #retreats, .campKulaqua a,.campKulaqua a img,.campKulaqua a span,
 .campKulaqua-ql a,.campKulaqua-ql a img, .campKulaqua-ql a span {
@@ -166,17 +175,33 @@ h1, h2, h3, h4 {
 	margin-right: 0;
 }
 
-.topMenu #retreats {
+.topMenu #retreats, .submenuParent ul li {
   background-image: url('../images/header/menu/camp-kulaqua-bg.gif');
 }
 .topMenu #retreats a {
   background: url('../images/down-arrow.png') no-repeat right center;
 }
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.submenuParent {
+  position: relative;
 }
+.submenuParent ul {
+  position: absolute;
+  top: 63px;
+  left: 0;
+  list-style: none outside;
+  padding: 0;
+  width: 200px;
+  z-index: 999;
+}
+.submenuParent ul li {
+  display: block;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.topMenu #retreats ul li a {
+  background-image: none;
+}
+
 /*MAIN MENU*/
 #item-1086 {
 	max-width: 18%;
@@ -186,6 +211,7 @@ h1, h2, h3, h4 {
 	position: relative;
 	width: 103%;
 	left: -16px;
+  z-index: 100;
 }
 .menuBannerLeft,.menuBannerRight {
 	width: 35px;
