@@ -117,7 +117,6 @@ h1, h2, h3, h4 {
 }
 .topMenu li {
   display: inline-block;
-  float: left;
 	width: 28%;
   text-align: center;
   padding:  7px 15px;
@@ -184,21 +183,21 @@ h1, h2, h3, h4 {
 .submenuParent {
   position: relative;
 }
-.submenuParent ul {
+.submenuParent .topSubmenu {
   position: absolute;
   top: 63px;
   left: 0;
   list-style: none outside;
   padding: 0;
-  width: 200px;
   z-index: 999;
+  display: none;
 }
-.submenuParent ul li {
-  display: block;
-  width: 100%;
+.submenuParent .topSubmenu li {
+  display: inline-block;
+  width: 200px;
   margin-bottom: 3px;
 }
-.topMenu #retreats ul li a {
+.topMenu #retreats .topSubmenu li a {
   background-image: none;
 }
 

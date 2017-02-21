@@ -27,7 +27,7 @@
 			<ul class="topMenu clearfix">
 
 				<li id="retreats" class="submenuParent" >
-					<a href="<?= $pages->get('/')->url ?>"><span>Kulaqua <br> Retreat Centers</span></a>
+					<a href="#"><span>Kulaqua <br> Retreat Centers</span></a>
 					<ul class="topSubmenu">
 						<li><a href="http://www.kulaqua.com/ " target="blank">Retreat &amp; Conference Center</a></li>
 						<li><a href="<?= $pages->get('1013')->url ?>">Stillwater Lodge</a></li>
