@@ -1,0 +1,375 @@
+html, body {
+	font-family Arial, Helvetica, sans-serif;
+	font-size 16px;
+	margin0;
+	padding0;
+}
+.clear {
+	clearboth;
+	line-height 1px;
+	font-size 1px;
+}
+img {
+	max-width 100%;
+	height auto;
+}
+
+.align_left {
+	float left;
+	margin 10px 10px 10px 0;
+}
+.align_right {
+	float right;
+	margin 10px 0 10px 10px;
+}
+
+ HEADER START 
+
+.headerWrapper{
+	width 96%;
+	margin0 auto;
+	max-width 1024px;
+	border-bottom1px solid black;
+	padding20px 0;
+	positionrelative;
+	min-height 123px;
+}
+.headerLogo {
+	positionabsolute;
+	left 10px;
+	top 10px;
+	display block;
+}
+.headerInfo {
+	margin-left 278px;
+}
+.headerTagline {
+	text-alignright;
+	margin10px 0 0 0;
+	font-size 20px;
+}
+.headerTelNumber{
+	text-alignright;
+	font-size 32px;
+	margin 10px 0 0 0;
+}
+.headerTelNumber span{
+	font-size 26px;
+}
+
+
+ MAIN NAVIGATION START 
+
+.subMenu li.active a, .mainMenu li.active a, .topMenu li.active a {color red;}
+.subMenu li.active ul li a {colorblack;}
+.submenu li ul li.active a {colorred;}
+
+.mainMenu, .topMenu {
+	clear both;
+	list-style none outside;
+	padding 10px;
+	margin 0;
+	background-color #eaeaea;
+}
+.mainMenu li, .topMenu li {
+	displayinline;
+	margin-right 0px;
+	border-right 2px solid black;
+	line-height 1.9em;
+}
+
+.topMenu {
+	 position absolute;
+	top30px;
+	right0;
+	width70%; 
+	margin-left 278px;
+}
+.topMenu li {
+	padding 0 1.4%;
+}
+.topMenu lilast-child {
+	border-right none;
+}
+.mainMenu {
+	margin 20px 0 0 0;
+	padding-left 3%;
+}
+.mainMenu li {
+	padding 0 1.1%;
+}
+.mainMenu lilast-child{
+	padding-right0;
+	border-right none;
+}
+ MAIN NAVIGATION  END 
+
+ HEADER END 
+
+
+
+ FOOTER START 
+
+.footerWrapper {
+	border-top 1px solid black;
+	clearboth;
+	width 96%;
+	margin0 auto;
+	max-width 1024px;
+}
+.footerLeft {
+	float left;
+	width 60%;
+}
+.footerRight {
+	float right;
+	width 35%;
+}
+ FOOTER END 
+
+
+
+ MAIN SECTION CONTAINERS START 
+.contentWrapper {
+	width96%;
+	margin0 auto;
+	max-width 1024px;
+	position relative;
+}
+.sidebarWrapper {
+	width22%;
+	float left;
+}
+.mainContentWrapper {
+	width 75%;
+	floatright;
+}
+ MAIN SECTION CONTAINERS END
+
+
+
+ HOMEPAGE START 
+
+
+ main slideshow
+.homepageSlideshow {
+	list-style none outside;
+	margin0;
+	padding 0;
+}
+.homepageSlideshow li img{
+    display block;
+    width 100%;
+    height auto;
+}
+.homepageSlideshowWrapper {
+	position relative;
+}
+.homepageSlideshowNavigation .btn{
+	zoom1;
+	cursor pointer;
+	z-index 999;
+	background-colorwhite;
+	position absolute;
+	top42%;
+	font-size 36px;
+	font-weight bold;
+
+}
+.homepageSlideshowNavigation .prev{
+	left0;
+}
+.homepageSlideshowNavigation .next{
+	right0;
+}
+
+
+ mini slideshow
+
+.homepageMiniSlideshow{
+	list-style none outside;
+	margin0;
+	padding 0;
+}
+.homepageMiniSlideshow li img{
+    display block;
+    width 100%;
+    height auto;
+}
+.homepageMiniSlideshowNavigation .btn{
+	zoom1;
+	cursor pointer;
+	z-index 999;
+	background-colorwhite;
+	position absolute;
+	top42%;
+	font-size 36px;
+	font-weight bold;
+
+}
+.homepageMiniSlideshowNavigation .prev{
+	left0;
+}
+.homepageMiniSlideshowNavigation .next{
+	right0;
+}
+
+ RETREAT HOMEPAGE LAYOUT
+
+.retreatHomepageText {
+	floatleft;
+	width 57%;
+	padding 0 4% 0 0;
+}
+.retreatHomepageBlogFeed {
+	floatright;
+	width 35%;
+	clearright;
+}
+.retreatHomepageMiniSlideshowWrapper {
+	floatright;
+	width35%;
+	position relative;
+	margin-top40px;
+}
+
+ CAMP HOMEPAGE LAYOUT
+.campHomepageText {
+	floatleft;
+	width 62%;
+	padding 0 4% 0 0;
+}
+.campCountdownWrapper {
+	width 30%;
+	floatright;
+	background-colorgray;
+	color white;
+	displaytable;
+	height 200px;
+	margin-top75px;
+}
+.countDown {
+	displaytable-cell; vertical-alignmiddle;
+	text-align center;
+	font-size 36px;
+
+}
+.countDown span {
+	font-size 18px;
+}
+.campHomepageBlogFeed {
+	floatleft;
+	width 62%;
+	clearleft;
+}
+.campHomepageMiniSlideshowWrapper {
+	floatright;
+	width30%;
+	position relative;
+	margin 20px 0 0 0;
+}
+ HOMEPAGE END 
+
+
+
+INNER PAGE START 
+
+.subMenu,.innerPageQuickLinks ul {
+	list-style none outside;
+	padding0;
+	margin20px 0 0 0;
+}
+.innerPageQuickLinks ul {
+	text-align center;
+}
+.subMenu,.innerPageQuickLinks ul li{
+	margin-bottom 15px; 
+}
+
+ BEGIN RESPONSIVE 
+
+@media screen and (max-width 799px) {
+.headerLogo {
+	max-width 33%;
+	left 1%;
+	float left;
+	position relative;
+	top 0;
+}
+.topMenu {
+	float right;
+	width 61%;
+	margin-left 0;
+	margin-top 3.5%;
+	padding 10px 2%;
+	clear none;
+}
+.headerInfo {
+	margin-left 0%;
+	clear both;
+}
+.headerTagline, .headerTelNumber {
+	text-alignleft;
+}
+}
+@media screen and (max-width 499px) {
+.headerLogo {
+	max-width 100%;
+	left 0%;
+	float none;
+	position relative;
+	top 0;
+	margin 0 auto;
+	width 253px;
+}
+.topMenu {
+	width 96%;
+	float none;
+	
+	margin-left 0;
+	margin-top 3.5%;
+	padding 10px 2%;
+	clear none;
+}
+.headerInfo {
+	margin-left 0%;
+	clear both;
+}
+.headerTagline, .headerTelNumber {
+	text-alignleft;
+}
+.subMenu  {
+	margin-top 0;
+}
+.sidebarWrapper, .mainContentWrapper{
+	width100%;
+	floatnone;
+	clearboth;
+}
+.mainContentWrapper {
+	padding1px 0 150px 0;
+}
+.subMenu {
+	padding 10px 0;
+}
+.subMenu li{
+	floatleft;
+	padding 0 1%;
+	margin 0 2px;
+}
+.innerPageQuickLinks {
+	position absolute;
+	left0;
+	bottom0;
+}
+.innerPageQuickLinks li {
+	width 48%;
+	float left;
+}
+}
+@media screen and (max-width 479px) {
+.footerLeft, .footerRight {
+    float none;
+    width 100%;
+}
+}
