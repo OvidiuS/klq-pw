@@ -6,8 +6,10 @@
 	<?php else:  ?>
 <title><?= $page->get("headline|title") ?> | Christian Retreat and Conference Center | North Florida</title>
 	<?php endif ?>
-	
-	<?php 
+	<?php if (isset($options['isFromHomePage']) && $options['isFromHomePage'] == true): ?>
+		<link rel="canonical" href="<?= $pages->get('1010')->httpUrl ?>">
+	<?php endif; ?>
+	<?php
 
 	function wordLimiter($str = '', $limit = 120, $endstr = '...'){
 
@@ -45,7 +47,7 @@
 	<meta name="p:domain_verify" content="326d06d5d8854b9ac52da03afdb604d6"/>
 	<meta name="generator" content="ProcessWire <?= $config->version; ?>" />
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1,  user-scalable=1"/>
-	
+
 	<link rel="apple-touch-icon" href="kulaqua-touch-icon-iphone.png" />
 	<link rel="apple-touch-icon" sizes="76x76" href="kulaqua-touch-icon-ipad.png" />
 	<link rel="apple-touch-icon" sizes="120x120" href="kulaqua-touch-icon-iphone-retina.png" />
@@ -57,7 +59,7 @@
 
 	<link rel="stylesheet" href="<?= $config->urls->templates?>plugins/owl-carousel/owl.carousel.css">
 	<link rel="stylesheet" href="<?= $config->urls->templates?>plugins/owl-carousel/owl.theme.css">
-	
+
 	<link rel="stylesheet" type="text/css" href="<?= $config->urls->templates?>styles/giv/main.css" />
 	<!-- ColorBox css -->
 	<link rel="stylesheet" type="text/css" href="<?= $config->urls->templates?>styles/giv/colorbox.css" />
@@ -65,11 +67,11 @@
 	<link rel="stylesheet" type="text/css" href="<?= $config->urls->templates?>styles/giv/custom-theme/jquery-ui-1.10.3.custom.css" />
 	<!-- lhpGigaImgViewer plugin css -->
 	<link rel="stylesheet" type="text/css" href="<?= $config->urls->templates?>styles/giv/lhp_giv.css" />
-	
+
 	<link rel="stylesheet" type="text/css" href="<?= $config->urls->templates?>styles/main.css" />
 
 	<style>
-		
+
 		.general-section .contentOuterWrapper{
 			background-image: url('<?= $pages->get("/")->general_bg->url ?>');
 		}
@@ -88,5 +90,3 @@
 	</style>
 
 </head>
-
-			
