@@ -105,67 +105,78 @@ h1, h2, h3, h4 {
 	padding: 0;
 	margin: 0;
 }
-.topMenu {  
+.topMenu {
 	overflow: hidden;
 	margin-left: 275px;
 	padding: 10px 0 0 0;
 }
 .topMenu li {
-	
-}
-.topMenu a {
-	float: left;
-	display: inline;
-	width: 50px;
-	padding:  7px 15px;
+  display: inline-block;
+  float: left;
+	width: 28%;
+  text-align: center;
+  padding:  7px 15px;
 	-moz-border-radius: 	5px;
 	-webkit-border-radius: 	5px;
 	border-radius: 			5px;
 	border: 1px solid white;
-	color: white;
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: 16px;
-	text-align: center;
-	margin-right: 7px;
-	text-shadow: 0px 3px 1px 0px rgba(150, 150, 150, 0.92);
-	-webkit-box-shadow: 0px 3px 1px 0px rgba(50, 50, 50, 0.92);
+  -webkit-box-shadow: 0px 3px 1px 0px rgba(50, 50, 50, 0.92);
 	-moz-box-shadow:    0px 3px 1px 0px rgba(50, 50, 50, 0.92);
 	box-shadow:         0px 1px 0px 0px rgba(50, 50, 50, 0.75);
-	
+  margin-right: 7px;
 }
-#page-1 a {
-	background-image: url('../images/header/menu/home-bg.gif'); 
+.topMenu a {
+	color: white;
+	text-transform: uppercase;
+	font-size: 16px;
+	text-shadow: 0px 3px 1px 0px rgba(150, 150, 150, 0.92);
+  text-decoration: none;
+  display:block;
+}
+.topMenu #donate{
+	background-image: url('../images/header/menu/home-bg.gif');
 	border-color: #F4896D;
 	font-size: 18px;
-	padding:  16px 15px;
 }
-#page-1010 a, .campKulaqua a,.campKulaqua a img,.campKulaqua a span,
+.topMenu>li:hover {
+  -webkit-filter: saturate(3);
+    filter: saturate(3);
+}
+.topMenu #retreats, .campKulaqua a,.campKulaqua a img,.campKulaqua a span,
 .campKulaqua-ql a,.campKulaqua-ql a img, .campKulaqua-ql a span {
-	width: 19.5%;
-	background-image: url('../images/header/menu/camp-kulaqua-bg.gif'); 
+	background-image: url('../images/header/menu/camp-kulaqua-bg.gif');
 	border-color: #c6da69;
 }
-#page-1011 a, .campKulaquaSummerCamp a,.campKulaquaSummerCamp a img,.campKulaquaSummerCamp a span,
+.topMenu #camp, .campKulaquaSummerCamp a,.campKulaquaSummerCamp a img,.campKulaquaSummerCamp a span,
 .kulaquaSummerCamp-ql a,.kulaquaSummerCamp-ql a img, .kulaquaSummerCamp-ql a span {
-	width: 18%;
-	background-image: url('../images/header/menu/kulaqua-summer-camp-bg.gif'); 
+	background-image: url('../images/header/menu/kulaqua-summer-camp-bg.gif');
 	border-color: #f8a145;
 }
-#page-1014 a, .pineLakes a,.pineLakes a img, .pineLakes a span,
+#page-1014, .pineLakes a,.pineLakes a img, .pineLakes a span,
 .pineLake-ql a,.pineLake-ql a img, .pineLake-ql a span {
 	width: 14%;
-	background-image: url('../images/header/menu/pine-lake-bg.gif'); 
+	background-image: url('../images/header/menu/pine-lake-bg.gif');
 	border-color: #abe4ef;
 }
 #page-1013 a, .stillWatersLodge a,.stillWatersLodge a img,.stillWatersLodge a span,
 .stillWaters-ql a,.stillWaters-ql a img, .stillWaters-ql a span {
 	width: 15%;
-	background-image: url('../images/header/menu/stillwater-lodge-bg.gif'); 
+	background-image: url('../images/header/menu/stillwater-lodge-bg.gif');
 	border-color: #bb87ac;
 	margin-right: 0;
 }
 
+.topMenu #retreats {
+  background-image: url('../images/header/menu/camp-kulaqua-bg.gif');
+}
+.topMenu #retreats a {
+  background: url('../images/down-arrow.png') no-repeat right center;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /*MAIN MENU*/
 #item-1086 {
 	max-width: 18%;
@@ -185,7 +196,7 @@ h1, h2, h3, h4 {
 .menuBannerLeft {
 	left:-22px;
 	top:10px;
-	
+
 }
 .menuBannerRight {
 	right: -22px;
@@ -236,7 +247,7 @@ h1, h2, h3, h4 {
 	text-shadow:none;
 	-moz-border-radius: 	3px;
 	-webkit-border-radius: 	3px;
-	border-radius: 			3px; 
+	border-radius: 			3px;
 	-webkit-transform-style: preserve-3d;
 }
 .menuDropdown {
@@ -283,7 +294,7 @@ h1, h2, h3, h4 {
 	background: url('../images/header/mainMenu/camp-kulaqua-bg-right.png');
 }
 .campKulaqua-section .mainMenu li {
-	max-width:11.5%; 
+	max-width:11.5%;
 }
 .campKulaqua-section .subMenu .active>a {
 	background-color: #AEBF60;
@@ -303,7 +314,7 @@ h1, h2, h3, h4 {
 	background: url('../images/header/mainMenu/summer-camp-bg-right.png');
 }
 .kulaquaSummerCamp-section .mainMenu li {
-	max-width:11%; 
+	max-width:11%;
 }
 .kulaquaSummerCamp-section .subMenu .active>a {
 	background-color: #DD8629;
@@ -515,27 +526,27 @@ h1, h2, h3, h4 {
 	text-align: left;
 }
 .socialMediaWrapper .blog {
-	background: url("../images/footer/blog-icon.png") no-repeat top left; 
+	background: url("../images/footer/blog-icon.png") no-repeat top left;
 	width: 22px;
 }
 .socialMediaWrapper .facebook{
-	background: url("../images/footer/fb-icon.png") no-repeat top left; 
+	background: url("../images/footer/fb-icon.png") no-repeat top left;
 	width: 11px;
 }
 .socialMediaWrapper .twitter{
-	background: url("../images/footer/twitter-icon.png") no-repeat top left; 
+	background: url("../images/footer/twitter-icon.png") no-repeat top left;
 	width: 22px;
 }
 .socialMediaWrapper .youtube{
-	background: url("../images/footer/yt-icon.png") no-repeat top left; 
+	background: url("../images/footer/yt-icon.png") no-repeat top left;
 	width: 21px;
 }
 .socialMediaWrapper .vimeo{
-	background: url("../images/footer/vimeo-icon.png") no-repeat top left; 
+	background: url("../images/footer/vimeo-icon.png") no-repeat top left;
 	width: 21px;
 }
 
-/* FOOTER END*/ 
+/* FOOTER END*/
 
 
 /*BLOG styles*/
@@ -577,7 +588,7 @@ h1, h2, h3, h4 {
 /*//////////////////////////////*/
 /* MAIN SECTION CONTAINERS START*/
 .contentOuterWrapper {
-	background: url(../images/bg/landing-page-bg.jpg) no-repeat top center ; 
+	background: url(../images/bg/landing-page-bg.jpg) no-repeat top center ;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -667,7 +678,7 @@ h1, h2, h3, h4 {
 	margin: 0 3px 3px 0;
 	color: #fff;
 	text-decoration: none;
-	
+
 	display: block;
 }
 .landingPageLocationLinks li a img {
@@ -689,7 +700,7 @@ h1, h2, h3, h4 {
 	margin: 0 auto;
 	padding: 10px 0;
 	margin-top: 5px;
-	
+
 }
 
 .landingPageLocationLinks  a span,
@@ -839,7 +850,7 @@ h1, h2, h3, h4 {
 .homepageSlideshowNavigation .prev{
 	left: 5px;
 	background: url('../images/homePage/prev-btn.png') no-repeat;
-	
+
 }
 .homepageSlideshowNavigation .prev:hover{
 	left: 4px;
@@ -1044,7 +1055,7 @@ h1, h2, h3, h4 {
 	text-align: center;
 }
 .subMenu,.innerPageQuickLinks ul li{
-	margin-bottom: 15px; 
+	margin-bottom: 15px;
 }
 .subMenu {
 	padding:0px;
@@ -1142,7 +1153,7 @@ h1, h2, h3, h4 {
 }
 .mapPopup  .mainImage img {
 	float: left;
-	margin-right: 2%; 
+	margin-right: 2%;
 	max-width: 60%;
 	outline: 0px solid #F2BC70;
 }
