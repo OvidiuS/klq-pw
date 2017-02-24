@@ -16,7 +16,7 @@ $(document).ready(function() {
   // $(".homepageSlideshowNavigation .prev").click(function(){
   //   $(".homepageSlideshow").trigger('owl.prev');
   // })
- 
+
   // $(".homepageMiniSlideshow").owlCarousel({
   // 	navigation : false, // Show next and prev buttons
   //   slideSpeed : 300,
@@ -39,7 +39,7 @@ $(document).ready(function(){
 	var settings = {
 		'viewportWidth' : '100%',
 		'viewportHeight' : '100%',
-		'fitToViewportShortSide' : true,  
+		'fitToViewportShortSide' : true,
 		'contentSizeOver100' : false,
 		'startScale' : 0,
 		'startX' : 0,
@@ -66,7 +66,7 @@ $(document).ready(function(){
 		'popupShowAction' : 'click',
 		'testMode' : false
 	};
-	
+
 	$('#interactiveMap').lhpGigaImgViewer(settings, 'MyHotspots');
 });
 
@@ -80,13 +80,19 @@ $(document).ready(function(){
 			$(this).addClass("activeThumb");
 			$('.visibleSlide .mainImage img').attr("src", src);
 
-		
+
 	});
 	$(".mapPopup .close").click(function(){
 		$(".mapPopup").hide("slow");
 		$( "div" ).removeClass( "visibleSlide" );
 	});
-});
-$('.menuDropdown').click(function() {
-	$('.subMenu').slideToggle();
+
+  $('.menuDropdown').click(function() {
+  	$('.subMenu').slideToggle();
+  });
+
+  $('.submenuParent').click(function(e) {
+  	$('.topSubmenu').slideToggle();
+  });
+
 });

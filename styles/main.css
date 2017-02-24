@@ -24,7 +24,11 @@ html, body {
 	padding:0;
 	background-color: #322D32;
 }
-
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
 .clear{
 	clear:both;
 	line-height: 1px;
@@ -105,65 +109,96 @@ h1, h2, h3, h4 {
 	padding: 0;
 	margin: 0;
 }
-.topMenu {  
-	overflow: hidden;
+.topMenu {
 	margin-left: 275px;
 	padding: 10px 0 0 0;
+  position: relative;
+  z-index: 999;
 }
 .topMenu li {
-	
-}
-.topMenu a {
-	float: left;
-	display: inline;
-	width: 50px;
-	padding:  7px 15px;
+  display: inline-block;
+	width: 27%;
+  text-align: center;
+  padding:  7px 1%;
 	-moz-border-radius: 	5px;
 	-webkit-border-radius: 	5px;
 	border-radius: 			5px;
 	border: 1px solid white;
-	color: white;
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: 16px;
-	text-align: center;
-	margin-right: 7px;
-	text-shadow: 0px 3px 1px 0px rgba(150, 150, 150, 0.92);
-	-webkit-box-shadow: 0px 3px 1px 0px rgba(50, 50, 50, 0.92);
+  -webkit-box-shadow: 0px 3px 1px 0px rgba(50, 50, 50, 0.92);
 	-moz-box-shadow:    0px 3px 1px 0px rgba(50, 50, 50, 0.92);
 	box-shadow:         0px 1px 0px 0px rgba(50, 50, 50, 0.75);
-	
+  margin-right: 1%;
 }
-#page-1 a {
-	background-image: url('../images/header/menu/home-bg.gif'); 
+.topMenu a {
+	color: white;
+	text-transform: uppercase;
+	font-size: 16px;
+	text-shadow: 0px 3px 1px 0px rgba(150, 150, 150, 0.92);
+  text-decoration: none;
+  display:block;
+}
+.topMenu #donate{
+	background-image: url('../images/header/menu/home-bg.gif');
 	border-color: #F4896D;
 	font-size: 18px;
-	padding:  16px 15px;
 }
-#page-1010 a, .campKulaqua a,.campKulaqua a img,.campKulaqua a span,
+.topMenu>li:hover,.topMenu>li:hover>ul>li:hover {
+  -webkit-filter: saturate(300%);
+    filter: saturate(300%);
+}
+.topMenu>li:hover>ul {
+  -webkit-filter: saturate(33%);
+    filter: saturate(33%);
+}
+.topMenu #retreats, .campKulaqua a,.campKulaqua a img,.campKulaqua a span,
 .campKulaqua-ql a,.campKulaqua-ql a img, .campKulaqua-ql a span {
-	width: 19.5%;
-	background-image: url('../images/header/menu/camp-kulaqua-bg.gif'); 
+	background-image: url('../images/header/menu/camp-kulaqua-bg.gif');
 	border-color: #c6da69;
 }
-#page-1011 a, .campKulaquaSummerCamp a,.campKulaquaSummerCamp a img,.campKulaquaSummerCamp a span,
+.topMenu #camp, .campKulaquaSummerCamp a,.campKulaquaSummerCamp a img,.campKulaquaSummerCamp a span,
 .kulaquaSummerCamp-ql a,.kulaquaSummerCamp-ql a img, .kulaquaSummerCamp-ql a span {
-	width: 18%;
-	background-image: url('../images/header/menu/kulaqua-summer-camp-bg.gif'); 
+	background-image: url('../images/header/menu/kulaqua-summer-camp-bg.gif');
 	border-color: #f8a145;
 }
-#page-1014 a, .pineLakes a,.pineLakes a img, .pineLakes a span,
+#page-1014, .pineLakes a,.pineLakes a img, .pineLakes a span,
 .pineLake-ql a,.pineLake-ql a img, .pineLake-ql a span {
 	width: 14%;
-	background-image: url('../images/header/menu/pine-lake-bg.gif'); 
+	background-image: url('../images/header/menu/pine-lake-bg.gif');
 	border-color: #abe4ef;
 }
 #page-1013 a, .stillWatersLodge a,.stillWatersLodge a img,.stillWatersLodge a span,
 .stillWaters-ql a,.stillWaters-ql a img, .stillWaters-ql a span {
 	width: 15%;
-	background-image: url('../images/header/menu/stillwater-lodge-bg.gif'); 
+	background-image: url('../images/header/menu/stillwater-lodge-bg.gif');
 	border-color: #bb87ac;
 	margin-right: 0;
+}
+.topMenu #retreats a{cursor:pointer;}
+.topMenu #retreats, .submenuParent ul li {
+  background-image: url('../images/header/menu/camp-kulaqua-bg.gif');
+}
+.topMenu #retreats a {
+  background: url('../images/down-arrow.png') no-repeat right center;
+}
+.submenuParent {
+  position: relative;
+}
+.submenuParent .topSubmenu {
+  position: absolute;
+  top: 63px;
+  left: 0;
+  list-style: none outside;
+  padding: 0;
+  z-index: 999;
+  display: none;
+}
+.submenuParent .topSubmenu li {
+  display: inline-block;
+  width: 200px;
+  margin-bottom: 3px;
+}
+.topMenu #retreats .topSubmenu li a {
+  background-image: none;
 }
 
 /*MAIN MENU*/
@@ -175,6 +210,7 @@ h1, h2, h3, h4 {
 	position: relative;
 	width: 103%;
 	left: -16px;
+  z-index: 100;
 }
 .menuBannerLeft,.menuBannerRight {
 	width: 35px;
@@ -185,7 +221,7 @@ h1, h2, h3, h4 {
 .menuBannerLeft {
 	left:-22px;
 	top:10px;
-	
+
 }
 .menuBannerRight {
 	right: -22px;
@@ -236,7 +272,7 @@ h1, h2, h3, h4 {
 	text-shadow:none;
 	-moz-border-radius: 	3px;
 	-webkit-border-radius: 	3px;
-	border-radius: 			3px; 
+	border-radius: 			3px;
 	-webkit-transform-style: preserve-3d;
 }
 .menuDropdown {
@@ -283,7 +319,7 @@ h1, h2, h3, h4 {
 	background: url('../images/header/mainMenu/camp-kulaqua-bg-right.png');
 }
 .campKulaqua-section .mainMenu li {
-	max-width:11.5%; 
+	max-width:11.5%;
 }
 .campKulaqua-section .subMenu .active>a {
 	background-color: #AEBF60;
@@ -303,7 +339,7 @@ h1, h2, h3, h4 {
 	background: url('../images/header/mainMenu/summer-camp-bg-right.png');
 }
 .kulaquaSummerCamp-section .mainMenu li {
-	max-width:11%; 
+	max-width:11%;
 }
 .kulaquaSummerCamp-section .subMenu .active>a {
 	background-color: #DD8629;
@@ -515,27 +551,27 @@ h1, h2, h3, h4 {
 	text-align: left;
 }
 .socialMediaWrapper .blog {
-	background: url("../images/footer/blog-icon.png") no-repeat top left; 
+	background: url("../images/footer/blog-icon.png") no-repeat top left;
 	width: 22px;
 }
 .socialMediaWrapper .facebook{
-	background: url("../images/footer/fb-icon.png") no-repeat top left; 
+	background: url("../images/footer/fb-icon.png") no-repeat top left;
 	width: 11px;
 }
 .socialMediaWrapper .twitter{
-	background: url("../images/footer/twitter-icon.png") no-repeat top left; 
+	background: url("../images/footer/twitter-icon.png") no-repeat top left;
 	width: 22px;
 }
 .socialMediaWrapper .youtube{
-	background: url("../images/footer/yt-icon.png") no-repeat top left; 
+	background: url("../images/footer/yt-icon.png") no-repeat top left;
 	width: 21px;
 }
 .socialMediaWrapper .vimeo{
-	background: url("../images/footer/vimeo-icon.png") no-repeat top left; 
+	background: url("../images/footer/vimeo-icon.png") no-repeat top left;
 	width: 21px;
 }
 
-/* FOOTER END*/ 
+/* FOOTER END*/
 
 
 /*BLOG styles*/
@@ -577,7 +613,7 @@ h1, h2, h3, h4 {
 /*//////////////////////////////*/
 /* MAIN SECTION CONTAINERS START*/
 .contentOuterWrapper {
-	background: url(../images/bg/landing-page-bg.jpg) no-repeat top center ; 
+	background: url(../images/bg/landing-page-bg.jpg) no-repeat top center ;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -667,7 +703,7 @@ h1, h2, h3, h4 {
 	margin: 0 3px 3px 0;
 	color: #fff;
 	text-decoration: none;
-	
+
 	display: block;
 }
 .landingPageLocationLinks li a img {
@@ -689,7 +725,7 @@ h1, h2, h3, h4 {
 	margin: 0 auto;
 	padding: 10px 0;
 	margin-top: 5px;
-	
+
 }
 
 .landingPageLocationLinks  a span,
@@ -839,7 +875,7 @@ h1, h2, h3, h4 {
 .homepageSlideshowNavigation .prev{
 	left: 5px;
 	background: url('../images/homePage/prev-btn.png') no-repeat;
-	
+
 }
 .homepageSlideshowNavigation .prev:hover{
 	left: 4px;
@@ -1044,7 +1080,7 @@ h1, h2, h3, h4 {
 	text-align: center;
 }
 .subMenu,.innerPageQuickLinks ul li{
-	margin-bottom: 15px; 
+	margin-bottom: 15px;
 }
 .subMenu {
 	padding:0px;
@@ -1142,7 +1178,7 @@ h1, h2, h3, h4 {
 }
 .mapPopup  .mainImage img {
 	float: left;
-	margin-right: 2%; 
+	margin-right: 2%;
 	max-width: 60%;
 	outline: 0px solid #F2BC70;
 }
@@ -1208,11 +1244,6 @@ h1, h2, h3, h4 {
 }
 
 /* BEGIN RESPONSIVE */
-@media screen and (max-width: 1078px) {
-.topMenu li a {
-	padding: 7px 12px;
-}
-}
 @media screen and (max-width: 989px) {
 .topMenu li a {
 	width: 94% !important;
@@ -1223,42 +1254,20 @@ h1, h2, h3, h4 {
 	min-height: 45px;
 }
 .topMenu li {
-	width: 49%;
-	padding: 0;
+	width: 30%;
 	float: left;
 	margin-right: 1%;
 	margin-bottom: 4px;
-}
-#page-1014 {
-	clear: left;
+  padding: 0 1%;
 }
 .MainMenuWrapper {
 	margin-top: 15px;
 }
-.topMenu li#page-1 {
-	width: 45px;
-}
-.topMenu #page-1 a {
-	width: 30px !important;
-	padding: 7px;
-	text-indent: -999em;
-}
-.topMenu #page-1 a span {
-	background: url(../images/homeIcon.png) no-repeat center center;
-	display: block;
-	min-height: 45px;
-}
 .headerTelNumber {
 	float: right;
 }
-#page-1 {
-	position: absolute;
-	left: 0px;
-	top: 10px;
-}
 .topMenu {
 	position: relative;
-	padding-left: 54px;
 }
 .mainMenu li, .mainMenu li a {
 	/*display: inline-block;
@@ -1279,21 +1288,25 @@ h1, h2, h3, h4 {
 }
 }
 @media screen and (max-width: 929px) {
-/*.headerLogo {
+.headerLogo {
 	max-width: 33%;
 	left: 1%;
 	float: left;
 	position: relative;
 	top: 0;
 }
-
 .topMenu {
 	float: right;
-	width: 61%;
+	width: 57%;
 	margin-left: 0;
 	padding: 10px 2%;
 	clear: none;
-} */
+}
+.topMenu li {
+  width: auto;
+  float: none;
+  display: block;
+}
 .headerInfo {
 	margin-left: 0%;
 	clear: both;
