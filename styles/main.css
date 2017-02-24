@@ -117,9 +117,9 @@ h1, h2, h3, h4 {
 }
 .topMenu li {
   display: inline-block;
-	width: 28%;
+	width: 27%;
   text-align: center;
-  padding:  7px 15px;
+  padding:  7px 1%;
 	-moz-border-radius: 	5px;
 	-webkit-border-radius: 	5px;
 	border-radius: 			5px;
@@ -127,7 +127,7 @@ h1, h2, h3, h4 {
   -webkit-box-shadow: 0px 3px 1px 0px rgba(50, 50, 50, 0.92);
 	-moz-box-shadow:    0px 3px 1px 0px rgba(50, 50, 50, 0.92);
 	box-shadow:         0px 1px 0px 0px rgba(50, 50, 50, 0.75);
-  margin-right: 7px;
+  margin-right: 1%;
 }
 .topMenu a {
 	color: white;
@@ -1244,11 +1244,6 @@ h1, h2, h3, h4 {
 }
 
 /* BEGIN RESPONSIVE */
-@media screen and (max-width: 1078px) {
-.topMenu li a {
-	padding: 7px 12px;
-}
-}
 @media screen and (max-width: 989px) {
 .topMenu li a {
 	width: 94% !important;
@@ -1259,42 +1254,20 @@ h1, h2, h3, h4 {
 	min-height: 45px;
 }
 .topMenu li {
-	width: 49%;
-	padding: 0;
+	width: 30%;
 	float: left;
 	margin-right: 1%;
 	margin-bottom: 4px;
-}
-#page-1014 {
-	clear: left;
+  padding: 0 1%;
 }
 .MainMenuWrapper {
 	margin-top: 15px;
 }
-.topMenu li#page-1 {
-	width: 45px;
-}
-.topMenu #page-1 a {
-	width: 30px !important;
-	padding: 7px;
-	text-indent: -999em;
-}
-.topMenu #page-1 a span {
-	background: url(../images/homeIcon.png) no-repeat center center;
-	display: block;
-	min-height: 45px;
-}
 .headerTelNumber {
 	float: right;
 }
-#page-1 {
-	position: absolute;
-	left: 0px;
-	top: 10px;
-}
 .topMenu {
 	position: relative;
-	padding-left: 54px;
 }
 .mainMenu li, .mainMenu li a {
 	/*display: inline-block;
@@ -1315,21 +1288,25 @@ h1, h2, h3, h4 {
 }
 }
 @media screen and (max-width: 929px) {
-/*.headerLogo {
+.headerLogo {
 	max-width: 33%;
 	left: 1%;
 	float: left;
 	position: relative;
 	top: 0;
 }
-
 .topMenu {
 	float: right;
-	width: 61%;
+	width: 57%;
 	margin-left: 0;
 	padding: 10px 2%;
 	clear: none;
-} */
+}
+.topMenu li {
+  width: auto;
+  float: none;
+  display: block;
+}
 .headerInfo {
 	margin-left: 0%;
 	clear: both;
