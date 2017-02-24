@@ -6,7 +6,7 @@
 	</div>
 	<div class="headerOuterWrapper">
 	<div class="headerWrapper">
-		
+
 		<a href="/" class="headerLogo">
 		<?php if ($page->rootParent == "1" || $page->rootParent == "1010" || $page->rootParent == "1003"): ?>
 			<img src="<?= $config->urls->templates?>images/logos/klq-temp-logo.png" alt="Christian Retreat and Conference Center" />
@@ -17,37 +17,40 @@
 		<?php elseif ($page->rootParent == "1013"): ?>
 			<img src="<?= $config->urls->templates?>images/logos/stillwaters-logo-transparent.png" alt="Florida Conference Center" />
 		<?php endif ?>
-			
+
 		</a>
-		
+
 		<div class="headerRight">
-			
+
 			<!-- NAVIGATION START -->
-			
-			<ul class="topMenu">
-	
-			<?php $topMenuPages = $pages->get(1015)->top_menu_pages;?>
-			
-				<?php 
-				foreach ($topMenuPages as $item) {
-					$class = ( $item === $page || ($page->parents->has($item) &&  $item->id != 1) ) ?' class="active"' : "";
-					echo "<li{$class} id='page-{$item->id}'><a href='{$item->url}'><span>{$item->title}</span></a></li>";
-				}?>
-	
+<?php $topMenuPages = $pages->get(1015)->top_menu_pages;?>
+			<ul class="topMenu clearfix">
+
+				<li id="retreats" class="submenuParent" >
+					<a><span>Kulaqua <br> Retreat Centers</span></a>
+					<ul class="topSubmenu">
+						<li><a href="http://www.kulaqua.com/ " target="blank">Retreat &amp; Conference Center</a></li>
+						<li><a href="<?= $pages->get('1013')->url ?>">Stillwater Lodge</a></li>
+						<li><a href="<?= $pages->get('1095')->url ?>">River Ranch</a></li>
+						<li><a href="<?= $pages->get('1014')->url ?>">Pine Lake Retreat</a></li>
+					</ul>
+				</li>
+				<li id="camp"><a href="<?= $pages->get('1011')->url ?>"><span>Kulaqua’s <br> Summer Camp</span></a></li>
+				<li id="donate"><a href="<?= $pages->get('1031')->url ?>"><span>Make a <br> Donation</span></a></li>
 			</ul>
 			<!-- /.topMenu -->
-			<div class="headerInfo">	
+			<div class="headerInfo">
 				<p class="headerTagline">We provide the opportunities. <span class="headerTaglineItalics">You provide the memories.</span>
 				<span class="headerTelNumber">Call us: 386.454.1351</span></p>
 			</div>
 			<!-- /.headerInfo -->
 		</div>
 		<!-- /.headerRight -->
-		
+
 		<!-- NAVIGATION END -->
 		<!-- ////////////// -->
 
-		
+
 
 	</div>
 	<!-- /. headerWrapper -->
